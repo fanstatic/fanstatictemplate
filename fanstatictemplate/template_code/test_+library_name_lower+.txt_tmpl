@@ -5,7 +5,6 @@ How to use?
 You can import XXX from ``${project}`` and ``need`` it where you want
 these resources to be included on a page::
 
-  >>> from js.jquery import XXX # XXX fix this test
-  >>> jquery.need()
+  >>> from ${project} import XXX # XXX fix this test
+  >>> XXX.need()
 
-.. _`fanstatic`: http://fanstatic.org
