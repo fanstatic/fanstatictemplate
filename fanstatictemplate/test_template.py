@@ -13,11 +13,12 @@ def test_template(tmpdir):
     command.run(args)
     package_dir = tmpdir.join('js.foo')
     # test the template_metadata
-    assert [item.basename for item in package_dir.listdir()] == \
-        ['js', '.hgignore', 'README.txt', 'setup.py', 'bootstrap.py', 'js.foo.egg-info',
-        'MANIFEST.in', 'LICENSE.txt', 'CHANGES.txt', 'buildout.cfg']
+    print sorted([item.basename for item in package_dir.listdir()])
+    assert sorted([item.basename for item in package_dir.listdir()]) == \
+        ['.hgignore', 'CHANGES.txt', 'LICENSE.txt','MANIFEST.in', 'README.txt',
+        'bootstrap.py', 'buildout.cfg', 'js', 'js.foo.egg-info', 'setup.py']
     # test the template_code
-    assert [item.basename for item in package_dir.join('js').join('foo').listdir()] == \
+    assert ([item.basename for item in package_dir.join('js').join('foo').listdir()]) == \
         ['test_foo.txt', '__init__.py', 'resources']
 
 def test_arbitrarily_deep_packages(tmpdir):
