@@ -16,7 +16,7 @@ setup(name='fanstatictemplate',
       install_requires=[
           'PasteScript',
       ],
-      extras_require=['pytest'],
+      extras_require=dict(test=['pytest',]),
       entry_points={
           'paste.paster_create_template':
               ['fanstatic = fanstatictemplate:Template']},
