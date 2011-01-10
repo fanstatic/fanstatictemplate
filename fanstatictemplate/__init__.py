@@ -3,7 +3,7 @@ import os
 from paste.script import templates, copydir
 
 class Template(templates.Template):
-    summary = 'Template for creating a Fanstatic package'
+    summary = 'Fanstatic package'
     _template_dir = 'template_metadata'
 
     vars = [
@@ -18,8 +18,10 @@ class Template(templates.Template):
         vars['project'] = vars['project'].lower()
         vars['project_stars'] = '*'*len(vars['project'])
         vars['library_name_lower'] = vars['library_name'].lower()
-        vars['steps'] = vars['project'].split('.')
+        steps = vars['steps'] = vars['project'].split('.')
         vars['first_step'] = vars['steps'][0]
+        if len(steps) > 1:
+            vars['namespace_packages'] = "namespace_packages=['%s']," % steps[0]
         vars['steps_concat'] = ', '.join(["'%s'" % step for step in vars['steps']])
         vars['project_path'] = '/'.join(vars['steps'])
 
