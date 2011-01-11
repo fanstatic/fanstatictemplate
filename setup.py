@@ -1,11 +1,21 @@
+import sys
+import os
 from setuptools import setup, find_packages
-import sys, os
 
 version = '1.0'
+
+def read(*rnames):
+    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
+long_description = (
+    read('README.txt')
+    + '\n' +
+    read('CHANGES.txt'))
 
 setup(name='fanstatictemplate',
       version=version,
       description="Fanstatic package template",
+      long_description=long_description,
       author='Fanstatic Developers',
       author_email='fanstatic@googlegroups.com',
       url='http://fanstatic.org',
