@@ -17,7 +17,7 @@ class Template(templates.Template):
     def pre(self, command, output_dir, vars):
         vars['project'] = vars['project'].lower()
         vars['project_stars'] = '*'*len(vars['project'])
-        vars['library_name_lower'] = vars['library_name'].lower()
+        vars['library_name_lower'] = vars['library_name'].replace(' ', '_').lower()
         steps = vars['steps'] = vars['project'].split('.')
         vars['first_step'] = vars['steps'][0]
         if len(steps) > 1:
