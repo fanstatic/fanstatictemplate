@@ -1,11 +1,10 @@
 CHANGES
 *******
 
-1.2 (unreleased)
+1.2 (2011-04-25)
 ================
 
-- Nothing changed yet.
-
+- Replace MANIFEST.in with hgtools to provide setuptools-svn like functionality.
 
 1.1 (2011-01-20)
 ================
