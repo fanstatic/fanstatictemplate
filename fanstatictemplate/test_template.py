@@ -14,7 +14,7 @@ def test_template(tmpdir):
     package_dir = tmpdir.join('js.foo')
     # test the template_metadata
     assert sorted([item.basename for item in package_dir.listdir()]) == \
-        ['.hgignore', 'CHANGES.txt', 'LICENSE.txt','MANIFEST.in', 'README.txt',
+        ['.hgignore', 'CHANGES.txt', 'LICENSE.txt', 'README.txt',
         'bootstrap.py', 'buildout.cfg', 'js', 'js.foo.egg-info', 'setup.py']
     # test the template_code
     assert sorted([item.basename for item in package_dir.join('js').join('foo').listdir()]) == \
