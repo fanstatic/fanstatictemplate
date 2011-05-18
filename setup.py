@@ -2,7 +2,7 @@ import sys
 import os
 from setuptools import setup, find_packages
 
-version = '1.3dev'
+version = '1.1'
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
@@ -23,7 +23,6 @@ setup(name='fanstatictemplate',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      setup_requires=['hgtools'], 
       install_requires=[
           'PasteScript',
       ],
