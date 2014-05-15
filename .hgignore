@@ -7,4 +7,5 @@ parts
 *.pyc
 *~
 develop-eggs
+eggs
 dist
