@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-1.5 (unreleased)
+1.5 (2014-05-16)
 ================
 
 - Updated bootstrap to latest buildout 2 version.
