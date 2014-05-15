@@ -4,7 +4,8 @@ CHANGES
 1.5 (unreleased)
 ================
 
-- Nothing changed yet.
+- Updated bootstrap to latest buildout 2 version.
+- Added zest.releaser per default.
 
 
 1.4 (2013-04-18)
