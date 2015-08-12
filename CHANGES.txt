@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-1.6 (unreleased)
+1.6 (2015-08-12)
 ================
 
 - Update bootstrap to work with recent releases of setuptools.
